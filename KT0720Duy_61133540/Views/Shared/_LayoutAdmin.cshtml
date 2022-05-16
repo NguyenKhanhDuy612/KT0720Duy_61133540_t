@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>HỆ THỐNG THÔNG TIN QUẢN LÝ SINH VIÊN</div>
+    <div>
+        <div>
+            @Html.ActionLink("GIỚI THIỆU", "../GioiThieu_61133540/GioiThieu_61133540", new { @class = "a" }) &nbsp; | &nbsp;
+            @Html.ActionLink("THÊM MỚI", "../SINHVIENs0720_61133540/Create", new { @class = "a" }) &nbsp; | &nbsp;
+            @Html.ActionLink("DANH SÁCH", "", new { @class = "a" }) &nbsp; | &nbsp;
+            @Html.ActionLink("TIỀM KIẾM", "", new { @class = "a" })
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <div id="footer">
+        Copyright &copy; NGUYỄN KHÁNH DUY @DateTime.Now.Year
+    </div>
+</body>
+</html>
