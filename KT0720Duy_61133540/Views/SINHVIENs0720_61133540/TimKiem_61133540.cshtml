@@ -6,7 +6,7 @@
     @Scripts.Render("~/Scripts/jquery-3.4.1.min.js")
   
 }
-<h2>TimKiem_61133540</h2>
+
 <html>
 <head>
     <style type="text/css">
@@ -85,36 +85,36 @@
             </table>
         }
     </div>
-        
-        <div>
-            <div id="gridContent">
-                @ViewBag.TB
-                @grid.GetHtml(
-                     tableStyle: "table table-bordered table-hover",
-                     footerStyle: "grid-footer",
-                     fillEmptyRows: true,
-                     mode: WebGridPagerModes.Numeric,
-                     alternatingRowStyle: "alternatingRowStyle",
-                     columns: new[]
-                     {
 
-                         grid.Column("STT",format: item => item.WebGrid.Rows.IndexOf(item) + 1 + Math.Round(Convert.ToDouble(grid.TotalRowCount / grid.PageCount)/ grid.RowsPerPage)* grid.RowsPerPage * grid.PageIndex ),
-                        grid.Column("MaSV","Mã sinh viên"),
-                        grid.Column("HoSV","Họ sinh viên"),
-                     grid.Column("TenSV","Tên sinh viên"),
-                     grid.Column("GioiTinh","Giới Tính",format: (@item) => @item.GioiTinh == true?"Nam":"Nữ"),
-                     grid.Column("NgaySinh","Ngày sinh",format:@<text> @item.NgaySinh.ToString("dd/MM/yyyy")</text>),
-grid.Column("AnhNV","Ảnh sinh viên"),
-grid.Column("DiaChi","Địa chỉ"),
-grid.Column("Chức năng", format: @<text>
-                        <a href="@Url.Action("Details",
-                        new { id = item.MaSV})" class="edit-btn"><abbr title="Xem chi tiết"><p>Xem chi tiết</p></abbr></a>
-            </text>),
+    <h2 style="text-align:center">DANH SÁCH SINH VIÊN</h2>
+
+    <div>
+        <div id="gridContent">
+            @ViewBag.TB
+            @grid.GetHtml(
+                 tableStyle: "table table-bordered table-hover",
+                 footerStyle: "grid-footer",
+                 fillEmptyRows: true,
+                 mode: WebGridPagerModes.Numeric,
+                 alternatingRowStyle: "alternatingRowStyle",
+                 columns: new[]
+                 {
+
+                     grid.Column("STT",format: item => item.WebGrid.Rows.IndexOf(item) + 1 + Math.Round(Convert.ToDouble(grid.TotalRowCount / grid.PageCount)/ grid.RowsPerPage)* grid.RowsPerPage * grid.PageIndex ),
+                    grid.Column("MaSV","Mã sinh viên"),
+                    grid.Column("HoSV","Họ sinh viên"),
+                 grid.Column("TenSV","Tên sinh viên"),
+                 grid.Column("GioiTinh","Giới Tính",format: (@item) => @item.GioiTinh == true?"Nam":"Nữ"),
+                 grid.Column("NgaySinh","Ngày sinh",format:@<text> @item.NgaySinh.ToString("dd/MM/yyyy")</text>),
+                    grid.Column("DiaChi","Địa chỉ"),
+                    grid.Column("LOP.TenLop","Lớp"),
+                     grid.Column(format: (item) => Html.ActionLink("Xem chi tiết", "Details","SINHVIENs0720_61133540", new { id = item.MaSV },"SINHVIENs0720_61133540Controller")),
+
 
 }
 )
-            </div>
         </div>
+    </div>
 
 </body>
 </html>

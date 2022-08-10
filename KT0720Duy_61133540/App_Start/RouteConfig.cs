@@ -16,7 +16,7 @@ namespace KT0720Duy_61133540
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "GioiThieu_61133540", action = "GioiThieu_61133540", id = UrlParameter.Optional }
             );
         }
     }
