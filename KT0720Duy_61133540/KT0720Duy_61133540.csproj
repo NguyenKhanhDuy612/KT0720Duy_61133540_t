@@ -155,15 +155,6 @@
     <Compile Include="Models\SINHVIEN.cs">
       <DependentUpon>Model_61133540.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>Model_61133540.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sp_helpdiagrams_Result.cs">
-      <DependentUpon>Model_61133540.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>Model_61133540.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -171,14 +162,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\styleAdmin.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Models\Model_61133540.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model_61133540.Context.cs</LastGenOutput>
       <DependentUpon>Model_61133540.edmx</DependentUpon>
+      <LastGenOutput>Model_61133540.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\Model_61133540.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -226,6 +218,7 @@
     <Content Include="Views\SINHVIENs0720_61133540\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Views\GioiThieu_61133540\GioiThieu_61133540.cshtml" />
+    <Content Include="Views\SINHVIENs0720_61133540\TimKiem_61133540.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

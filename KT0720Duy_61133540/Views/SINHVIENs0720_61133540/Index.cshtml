@@ -128,10 +128,8 @@
 grid.Column("AnhNV","Ảnh sinh viên"),
 grid.Column("DiaChi","Địa chỉ"),
 grid.Column("LOP.TenLop","Lớp"),
-grid.Column("Chức năng", format: @<text>
-                        <a href="@Url.Action("Details",
-                        new { id = item.MaSV})" class="edit-btn"><abbr title="Xem chi tiết"><p>Xem chi tiết</p></abbr></a>
-        </text>),
+grid.Column(format: (item) => Html.ActionLink("Xem chi tiết", "Details","SINHVIENs0720_61133540", new { id = item.MaSV },"SINHVIENs0720_61133540Controller")),
+
 
 }
 )

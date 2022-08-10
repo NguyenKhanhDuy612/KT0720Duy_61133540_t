@@ -15,6 +15,19 @@ namespace KT0720Duy_61133540.Controllers
         private KT0720_61133540Entities db = new KT0720_61133540Entities();
 
         // GET: SINHVIENs0720_61133540
+
+        public ActionResult TimKiem_61133540(string MaSV = "", string HoTen = "")
+        {
+
+
+            ViewBag.MaSV = MaSV;
+            ViewBag.HoTen = HoTen;
+
+            var SINHVIENs = db.SINHVIENs.SqlQuery("SinhVien_TimKiem'" + MaSV + "',N'" + HoTen + "'");
+           if (SINHVIENs.Count() == 0)
+                ViewBag.TB = "Không có thông tin tìm kiếm.";
+            return View(SINHVIENs.ToList());
+        }
         public ActionResult Index()
         {
             var sINHVIENs = db.SINHVIENs.Include(s => s.LOP);

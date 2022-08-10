@@ -13,8 +13,7 @@
     <title>Create</title>
 </head>
 <body>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryval")
+   
 
 
     @using (Html.BeginForm("Create", "SINHVIENs0720_61133540", FormMethod.Post, new { enctype = "multipart/form-data" }))
@@ -86,7 +85,7 @@
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(model => model.MaLop, "MaLop", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.MaLop, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
                     @Html.DropDownList("MaLop", null, htmlAttributes: new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.MaLop, "", new { @class = "text-danger" })
@@ -101,8 +100,5 @@
         </div>
     }
 
-    <div>
-        @Html.ActionLink("Back to List", "Index")
-    </div>
 </body>
 </html>
